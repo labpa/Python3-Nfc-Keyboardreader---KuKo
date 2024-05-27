@@ -12,7 +12,7 @@ Installation **pyscard** und **pynput**:
 `pip3 install pyscard pynput`
 
 ### 4. Systempakete installieren
-Installation *pcsc-tools**, **pcscd**, **libusb**:   
+Installation **pcsc-tools**, **pcscd**, **libusb**:   
 `sudo apt install pcsc-tools pcscd libusb-dev`
 
 Installation **ccid**:  
@@ -29,7 +29,7 @@ Neustart des Rechners:
 `sudo shutdown -r now`
 
 
-### Skript ausführen
+### 7. Skript ausführen
 
 ## NFC-Reader Testen
 Um zu Testen ob der Angesteckte NFC-Reader verwendet werden kann,
