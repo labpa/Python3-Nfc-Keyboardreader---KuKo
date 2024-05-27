@@ -57,10 +57,10 @@ def readUID():
     readingLoop = 1
     while readingLoop:
         try:
-            print("Versuche, Verbindung herzustellen...")
+            # print("Versuche, Verbindung herzustellen...")
             connection = reader.createConnection()
-            print("Verbindung erfolgreich hergestellt.")
-            print("Versuche, zu verbinden...")
+            # print("Verbindung erfolgreich hergestellt.")
+            # print("Versuche, zu verbinden...")
             status_connection = connection.connect()
             print("Verbindungsstatus:", status_connection)
             # Senden des Befehls zum Lesen der UID des NFC-Tags
@@ -93,3 +93,4 @@ def readUID():
 while True:
     readUID()
     sleep(1)
+
