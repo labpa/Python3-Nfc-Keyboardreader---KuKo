@@ -1,8 +1,8 @@
 #! /usr/bin/env python3
-import re
-import argparse
+# import re
+# import argparse
 from smartcard.System import readers
-import datetime
+# import datetime
 import sys
 from pynput.keyboard import Key, Controller
 from time import sleep
@@ -57,21 +57,17 @@ def readUID():
     readingLoop = 1
     while readingLoop:
         try:
-            # print("Versuche, Verbindung herzustellen...")
             connection = reader.createConnection()
-            # print("Verbindung erfolgreich hergestellt.")
-            # print("Versuche, zu verbinden...")
             status_connection = connection.connect()
-            print("Verbindungsstatus:", status_connection)
+            # print("Verbindungsstatus:", status_connection)
             # Senden des Befehls zum Lesen der UID des NFC-Tags
-            print("Sende Befehl zum Lesen der UID...")
             resp = connection.transmit([0xFF, 0xCA, 0x00, 0x00, 0x00])
-            print("Antwort vom Lesegerät:", resp)
+            # print("Antwort vom Lesegerät:", resp)
             dataCurr = stringParser(resp)
 
             # Wenn die UID erfolgreich gelesen wurde
             if dataCurr is not None:
-                print("UID erfolgreich gelesen:", dataCurr)
+                # print("UID erfolgreich gelesen:", dataCurr)
                 # Tastatureingabe der UID gefolgt von der Enter-Taste
                 keyboard.type(dataCurr)
                 keyboard.press(Key.enter)
